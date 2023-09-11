@@ -4,10 +4,38 @@ table, td, th, tr{
     border: 1px solid black;
 }
 
+body{
+    justify-content: center;
+}
+
 .tabla{
     align-content: center;
     width: 100%;
     background-color: bisque;
     justify-content: center;
     display: flex;
+}
+
+.a1{
+    background-color: yellow;
+}
+
+.a2{
+    background-color: aqua;
+}
+
+.a3{
+  background-color: gray;
+}
+
+.a4{
+    background-color: red;
+}
+
+.a5{
+    background-color: white;
+}
+
+.a6{
+    background-color: green;
 }
