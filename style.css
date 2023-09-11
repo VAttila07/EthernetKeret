@@ -1,4 +1,16 @@
+body{
+    background-color: #4c5159;
+}
 
+#wrap{
+    justify-content: center;
+}
+
+header{
+    background-color: brown;
+    justify-content: center;
+    font-weight: bold;
+}
 
 table, td, th, tr{
     width: 1vw;
