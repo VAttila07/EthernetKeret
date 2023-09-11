@@ -1,0 +1,11 @@
+table, td, th, tr{
+    width: 1vw;
+    align-self: center;
+    border: 1px solid black;
+}
+
+.tabla{
+    align-content: center;
+    width: 100%;
+    background-color: bisque;
+}
