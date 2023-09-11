@@ -7,9 +7,9 @@
     <title>Ethernet Keret</title>
 </head>
 <body>
+    <header><h1>Ethernet Keret</h1></header>
     <div class="tabla">
         <table>
-            <thead>Ethernet Keret</thead>
             <tr>
                 <th>8 BYTE</th>
                 <th>6 BYTE</th>
@@ -27,6 +27,33 @@
                 <td class="a6">CRC</td>
             </tr>
         </table>
+    </div>
+    <div class="a1">
+        <h2>Előtag</h2>
+        <p>Az előtag (preamble)váltakozva tartalmaz egyeseket és nullákat. 7 darab 10101010 tartalmú bájtból álló sorozat. A 10 Mbit/s-os és kisebb sebességű Ethernet-megvalósításoknál az órajel szinkronizálása ennek a mezőnek a segítségével történik. Az Ethernet gyorsabb változatai szinkron működésűek, ezeknél időzítési információkra nincs szükség; ennek ellenére, a kompatibilitás érdekében a mező megmaradt.</p>
+
+        <p>Az előtagot egy egyoktetből álló mező a keretkezdő (start frame delimiter) követi, amely az időzítési információk végét, a keret tényleges kezdetét jelzi. Tartalma az 10101011 bitsorozat</p>
+    </div>
+    <div class="a2">
+        <h2>CÉL MAC CÍME</h2>
+        <p>Ezután a cél (destination) állomás 48-bites címe következik. Az Ethernet hálózaton minden állomást egy egyedi, 48-bites (6 bájtos) ún. MAC (Media Access Control) cím azonosít. Ezen címek kiosztását az IEEE kontrollálja.</p>
+    </div>
+    <div class="a3">
+        <h2>FORRÁS CÍME</h2>
+        <p>Ezután a küldő (source) állomás 48-bites címe következik. Az Ethernet hálózaton minden állomást egy egyedi, 48-bites (6 bájtos) ún. MAC (Media Access Control) cím azonosít. Ezen címek kiosztását az IEEE kontrollálja.</p>
+    </div>
+    <div class="a4">
+        <h2>Típus/hossz</h2>
+        <p>A hossz/típus mezőt kétféle célra lehet használni. Ha értéke a decimális 1536-nál, vagyis a hexadecimális 0×600-nál kisebb, akkor a benne szereplő érték hosszt ad meg, egyébként típus értékként azt adja meg, hogy az Ethernet folyamatainak lezárulása után melyik felsőbb rétegbeli protokoll fogja kapni az adatokat. A hossz a mezőt követő adatrészben található bájtok számát adja meg.</p>
+    </div>
+    <div class="a5">
+        <h2>Adatok</h2>
+        <p>Az adat mező és a szükség szerinti kitöltés hossza tetszőleges lehet, azonban a keret mérete nem haladhatja meg a felső mérethatárt. A maximális átviteli egység (maximum transmission unit, MTU) az Ethernet esetében 1500 oktett, az adatok mérete tehát ezt nem haladhatja meg. A mező tartalma nincs meghatározva. Ha nincs elég felhasználói adat ahhoz, hogy a keret mérete elérje a minimális kerethosszt, akkor előre meg nem határozott mennyiségű adat kerül beillesztésre, közvetlenül a felhasználói adatok mögé. Ezt a többletadatot nevezzük kitöltésnek. Az Ethernet keretek hosszának 64 és 1518 oktett között kell lennie.</p>
+    </div>
+    <div class="a6">
+        <h2>CRC</h2>
+        <p>A keret végén szereplő FCS (Frame Check Sequence - Keret Ellenőrző Sorozat) mezőben egy 4 bájton CRC ellenőrző összeg helyezkedik el. Ha a vevő által számolt és a keretben lévő összeg nem egyezik, a keret eldobásra kerül.
+        </p>
     </div>
 </body>
 </html>
